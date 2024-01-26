@@ -220,10 +220,12 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
     DB_PASSWORD=1
     ```
 
-## Download Files
+## Download Files 
+  - Downoad Files from [**DownloadFiles**](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DownloadFiles) folder.Else given below
+
    **mysql Database File**
    - All tables and values ​​are present to execute task.
-   - [healthzoneDb](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone.sql)
+   - file link => [healthzoneDb](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone.sql) 
    ```bash
     # Open cmd
     # Navigate to the download file path
@@ -234,7 +236,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    ```
 
    **Postman Api's Folder**
-   - [postman Api endPoints](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone_server.postman_collection.json)
+   - folder link => [postman Api endPoints](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone_server.postman_collection.json)
    ```bash
    # Open Postman
    # Select the "Import" option
@@ -258,4 +260,4 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
 **Created By:**
 
 Mr Suhail
-
+- Email address letxandy@gmail.com
