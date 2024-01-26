@@ -1,0 +1,27 @@
+endpoint 
+  Hospital
+    http://localhost:3001/api/v1/hospital/add
+    http://localhost:3001/api/v1/hospital/details/:id
+    http://localhost:3001/api/v1/hospital/getAll
+    http://localhost:3001/api/v1/hospital/get/:id
+    http://localhost:3001/api/v1/hospital/update/:id
+    http://localhost:3001/api/v1/hospital/delete/:id
+    
+   Psychiatrist
+    http://localhost:3001/api/v1/pyschiatrist/add
+    http://localhost:3001/api/v1/pyschiatrist/details/:id
+    http://localhost:3001/api/v1/pyschiatrist/getAll
+    http://localhost:3001/api/v1/pyschiatrist/get/:id
+    http://localhost:3001/api/v1/pyschiatrist/update/:id
+    http://localhost:3001/api/v1/pyschiatrist/delete/:id
+   
+   Patient
+    http://localhost:3001/api/v1/patient/add
+    http://localhost:3001/api/v1/patient/getAll
+    http://localhost:3001/api/v1/patient/get/:id
+    http://localhost:3001/api/v1/patient/update/:id
+    http://localhost:3001/api/v1/patient/delete/:id
+   
+   Image
+    http://localhost:3001/api/v1/image/get/:imagename
+  

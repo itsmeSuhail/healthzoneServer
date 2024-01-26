@@ -1,0 +1,15 @@
+desc patient;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| id              | char(12)     | NO   | PRI | NULL    |       |
+| hospital_id     | char(12)     | YES  | MUL | NULL    |       |
+| psychiatrist_id | char(12)     | YES  | MUL | NULL    |       |
+| name            | varchar(255) | NO   |     | NULL    |       |
+| address         | varchar(255) | NO   |     | NULL    |       |
+| email           | varchar(255) | NO   |     | NULL    |       |
+| phone           | varchar(15)  | NO   |     | NULL    |       |
+| password        | varchar(15)  | NO   |     | NULL    |       |
+| patient_image   | varchar(80)  | YES  |     | NULL    |       |
+| otp             | varchar(6)   | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+

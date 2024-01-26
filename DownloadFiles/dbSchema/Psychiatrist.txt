@@ -1,0 +1,12 @@
+desc psychiatrist;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| id            | char(12)     | NO   | PRI | NULL    |       |
+| hospital_id   | char(12)     | YES  | MUL | NULL    |       |
+| name          | varchar(255) | NO   |     | NULL    |       |
+| email         | varchar(255) | NO   |     | NULL    |       |
+| phone         | varchar(15)  | NO   |     | NULL    |       |
+| password      | varchar(15)  | NO   |     | NULL    |       |
+| patient_count | int(11)      | YES  |     | 0       |       |
++---------------+--------------+------+-----+---------+-------+

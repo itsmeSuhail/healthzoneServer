@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "819aff17-f3b9-4fc8-8661-ce3da30848d6",
+		"name": "healthzone_server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15524764"
+	},
+	"item": [
+		{
+			"name": "hospitalApi",
+			"item": [
+				{
+					"name": "http://localhost:3001/api/v1/hospital/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"naveen Hospital\",\n    \"location\":\"delhi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/hospital/add"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/hospital/details/1706176600",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"hospitalId\": \"1706176600\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/hospital/details/456789012345",
+						"description": "get hospital details and all pyschiatrist and patients count"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/hospital/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/hospital/getAll",
+						"description": "get all hospital details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/hospital/get/1706176600",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/hospital/get/345678901234",
+						"description": "get individual hospital details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/hospital/update/1706176600",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"rajan dev hospital\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/hospital/update/345678901234",
+						"description": "update individual hospital details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/hospital/delete/17061",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/hospital/delete/17061",
+						"description": "delte individual hospital"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pyschiatristApi",
+			"item": [
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"email\": \"dfs@gmail.com\",\n        \"phone\": \"+918990785632\",\n        \"password\": \"P1t04krj\",\n        \"name\": \"vasu\",\n        \"hospitalId\": \"1706176600\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/pyschiatrist/add",
+						"description": "add psychiatrist"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/details/100245678901",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_count\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/pyschiatrist/details/300167890123",
+						"description": "get psychiatrist patient details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/pyschiatrist/getAll",
+						"description": "get all psychiatrists"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/get/1706177666",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/pyschiatrist/get/300167890123",
+						"description": "get individual psychiatrist details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/update/1706177666",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"dev ridhima\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/pyschiatrist/update/300167890123",
+						"description": "update pyschiatrist details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/pyschiatrist/delete/1177666",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/pyschiatrist/delete/1177666",
+						"description": "delete pyschiatrist details"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patientApi",
+			"item": [
+				{
+					"name": "http://localhost:3001/api/v1/patient/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "yogita thakur",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "thakurji@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+918967454378",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "DudeT1run",
+									"type": "text"
+								},
+								{
+									"key": "psychiatristId",
+									"value": "300167890123",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "rzf 435,new Delhi",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/abc/Pictures/Screenshots/Screenshot from 2024-01-25 12-03-05.png"
+								}
+							]
+						},
+						"url": "http://localhost:3001/api/v1/patient/add",
+						"description": "add patient details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/patient/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/patient/getAll",
+						"description": "get all Patient Details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/patient/get/1706180071",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/patient/get/170620117013",
+						"description": "get patient detail"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/patient/update/1706180071",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ab@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/v1/patient/update/170620117013",
+						"description": "update patient details"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/api/v1/patient/delete/170620117013",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/patient/delete/170620117013",
+						"description": "delete patient"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "imageApi",
+			"item": [
+				{
+					"name": "http://localhost:3001/api/v1/image/get/af12ef1c9061d1cde199e8098ae4520d.jpg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/v1/image/get/af12ef1c9061d1cde199e8098ae4520d.jpg",
+						"description": "get patient image"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
