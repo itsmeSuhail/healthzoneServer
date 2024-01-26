@@ -13,7 +13,6 @@ import os from "os";
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-const cache = apicache.middleware;
 app.use(cors())
 app.use(express.json());
 app.use(cacheController)
