@@ -38,7 +38,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   const body={"name":"Naveen Hospital", "location":"Delhi"}
   ```
  
- - **Hospital Details:**
+ - **Hospital Details By Id:**
   - Endpoint: `GET /api/v1/hospital/details/:id`
   - Description: Retrieve hospital name, psychiatrist array, total count, and total patient.
   ```javascript
@@ -52,14 +52,14 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   const link="http://localhost:3001/api/v1/hospital/getAll"
   ```
 
-- **Get Hospital by ID:**
+- **Get Hospital by Id:**
   - Endpoint: `GET /api/v1/hospital/get/:id`
   - Description: Retrieve information about a specific hospital.
   ```javascript
    const link="http://localhost:3001/api/v1/hospital/get/456789012345"
   ```
 
-- **Update Hospital:**
+- **Update Hospital By Id:**
   - Endpoint: `PUT /api/v1/hospital/update/:id`
   - Description: Update specific hospital details.
   -only given fields can be updated
@@ -69,7 +69,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   ```
   
 
-- **Delete Hospital:**
+- **Delete Hospital By Id:**
   - Endpoint: `DELETE /api/v1/hospital/delete/:id`
   - Description: Delete a specific hospital.
   ```javascript
@@ -92,28 +92,28 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
     }
   ```
 
--**Psychiatrist Details:**
+- **Psychiatrist Details By Id:**
   - Endpoint: `GET /api/v1/psychiatrist/details/:id`
   - Description: Retrieve psychiatrist name and details of all their patients.
   ```javascript
   const link="http://localhost:3001/api/v1/psychiatrist/details/400478901234"
   ```
 
--**Get All Psychiatrists:**
+- **Get All Psychiatrists:**
   - Endpoint: `GET /api/v1/psychiatrist/getAll`
   - Description: Retrieve information about all psychiatrists.
   ```javascript
   const link="http://localhost:3001/api/v1/psychiatrist/getAll"
   ```
 
--**Get Psychiatrist by ID:**
+- **Get Psychiatrist by Id:**
   - Endpoint: `GET /api/v1/psychiatrist/get/:id`
   - Description: Retrieve information about a specific psychiatrist.
   ```javascript
   const link="http://localhost:3001/api/v1/psychiatrist/get/400478901234"
   ```
 
--**Update Psychiatrist:**
+- **Update Psychiatrist By Id:**
   - Endpoint: `PUT /api/v1/psychiatrist/update/:id`
   - Description:  Update specific psychiatrist details.
   ```javascript
@@ -126,7 +126,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
         }
   ```
 
--**Delete Psychiatrist By Id:**
+- **Delete Psychiatrist By Id:**
   - Endpoint: `DELETE /api/v1/psychiatrist/delete/:id`
   - Description: Retrieve information about a specific psychiatrist.
   ```javascript
@@ -151,14 +151,14 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   const link="http://localhost:3001/api/v1/patient/getAll"
   ```
 
-- **Get Patient by ID:**
+- **Get Patient by Id:**
   - Endpoint: `GET /api/v1/patient/get/:id`
   - Description: Retrieve information about a specific patient.
   ```javascript
    const link="http://localhost:3001/api/v1/patient/get/170620117013"
   ```
 
-- **Update Patient by ID:**
+- **Update Patient by Id:**
   - Endpoint: `PUT /api/v1/patient/update/:id`
   - Description:  Update specific patient details.
   ```javascript
@@ -167,7 +167,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    const body={"name":"vasu", "email":"strong@gmail.com","phone":"+918368992566","address":"purple light,near school"}
   ```
 
-- **Delete Patient by ID:**
+- **Delete Patient by Id:**
   - Endpoint: `DELETE /api/v1/patient/delete/:id`
   - Description:  Delete a specific patient.
   ```javascript
@@ -215,7 +215,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
 - Set the following variables in the .env file:
     ```javascript
     DB_HOSTNAME=127.0.0.1
-    DB_NAME=hire
+    DB_NAME=healthzone
     DB_USERNAME=root
     DB_PASSWORD=1
     ```
@@ -223,7 +223,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
 ## Download Files
    **mysql Database File**
    - All tables and values ​​are present to execute task.
-   - [healthzoneDb](https://github.com)
+   - [healthzoneDb](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone.sql)
    ```bash
     # Open cmd
     # Navigate to the download file path
@@ -234,7 +234,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    ```
 
    **Postman Api's Folder**
-   - [postman Api endPoints](https://www.github.com)
+   - [postman Api endPoints](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone_server.postman_collection.json)
    ```bash
    # Open Postman
    # Select the "Import" option
