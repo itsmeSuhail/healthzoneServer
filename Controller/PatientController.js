@@ -90,10 +90,7 @@ export const updatePatient=async (req, res) => {
       if(id===undefined||id===''){
         responseError(res,400,"bad credentials",{error:"Invalid  id"});
       }
-      const [row] = await req.db.execute('SELECT id FROM patient WHERE id = ?', [id]);
-      if(row.length===0){
-        responseError(res,404,"not found",{error:"Invalid  id"});
-      }
+     
      
       const updateFields = [];
       const values = [];
@@ -131,7 +128,11 @@ export const updatePatient=async (req, res) => {
         }
         values.push(req.body.phone);
       }
-      if(Object.keys(req.body).length===0){
+      const [row] = await req.db.execute('SELECT id FROM patient WHERE id = ?', [id]);
+      if(row.length===0){
+        responseError(res,404,"not found",{error:"Invalid  id"});
+      }
+     else if(Object.keys(req.body).length===0){
         responseError(res, 400, " Attributes required", {error:"fields required for update",});
   
       }

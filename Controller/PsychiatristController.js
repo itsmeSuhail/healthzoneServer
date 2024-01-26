@@ -136,10 +136,7 @@ export const updatePschiatrist=async (req, res) => {
         if(id===undefined||id===''){
             responseError(res,400,"bad credentials",{error:"Invalid  id"});
           }
-          const [row] = await req.db.execute('SELECT id FROM psychiatrist WHERE id = ?', [id]);
-      if(row.length===0){
-        responseError(res,404,"not found",{error:"Invalid  id"});
-      }
+        
         const updateFields = [];
         const values = [];
         const errorBucket = {};
@@ -179,7 +176,10 @@ else{
             values.push(req.body.phone);
             }
         }
-         
+        const [row] = await req.db.execute('SELECT id FROM psychiatrist WHERE id = ?', [id]);
+        if(row.length===0){
+          responseError(res,404,"not found",{error:"Invalid  id"});
+        }
         if(Object.keys(req.body).length===0){
             responseError(res, 400, " Attributes required", {error:"fields required for update",});
       
