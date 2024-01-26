@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors"
 import { mysqlInstance } from "./model/databse/mysql.config.js"
-import apicache from "apicache";
+import cacheController from "./utility/cache.config.js";
 import compression from "compression";
 import rateLimiterMiddleware from "./utility/rateLimiter.js";
 import cluster from "cluster";
@@ -16,7 +16,7 @@ const app = express();
 const cache = apicache.middleware;
 app.use(cors())
 app.use(express.json());
-app.use(cache('5 minutes'))
+app.use(cacheController)
 app.use(compression({
   level: 6,
   threshold: 5 * 100

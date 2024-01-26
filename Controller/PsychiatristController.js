@@ -139,7 +139,7 @@ export const updatePschiatrist=async (req, res) => {
         const updateFields = [];
         const values = [];
         const errorBucket = {};
-        if (req.body.name) {
+        if (req.body.name!==undefined) {
             const checkerror = validName(req.body.name);
             if (checkerror) {
                 errorBucket["name"] = checkerror;
@@ -149,12 +149,12 @@ export const updatePschiatrist=async (req, res) => {
                values.push(req.body.name);
            }
         }
-        if (req.body.patient_count) {
+        if (req.body.patient_count!==undefined) {
             
                updateFields.push('patient_count = ?');
                values.push(parseInt(req.body.patient_count));
         }
-        if (req.body.email) {
+        if (req.body.email!==undefined) {
             const checkerror = validEmail(req.body.email);
             if (checkerror) {
                 errorBucket["email"] = checkerror;
@@ -165,7 +165,7 @@ else{
     values.push(req.body.email);
 }   
         }
-        if (req.body.phone) {
+        if (req.body.phone!==undefined) {
             const checkerror = validatePhoneNumberWithCountryCode(req.body.phone);
             if (checkerror) {
                 errorBucket["phone"] = checkerror;
@@ -175,15 +175,20 @@ else{
             values.push(req.body.phone);
             }
         }
-
+         
         if(Object.keys(req.body).length===0){
             responseError(res, 400, " Attributes required", {error:"fields required for update",});
       
           }
     else    if (Object.keys(errorBucket).length > 0) {
-            responseError(res,400,"bad credentials",{error:"Invalid  id"});
+            responseError(res,400,"bad credentials",errorBucket);
 
-        } else {
+        }
+        else if(updateFields.length==0){
+        responseError(res,400,"bad credentials",{error:"please update selected fields only"});
+
+        }
+        else {
             const sqlQuery = `
         UPDATE psychiatrist
         SET ${updateFields.join(', ')}

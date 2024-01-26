@@ -125,7 +125,7 @@ export const updateHospital = async (req, res) => {
     const updateFields = [];
     const values = [];
     const errorBucket = {};
-    if (req.body.name) {
+    if (req.body.name!==undefined) {
       updateFields.push('name = ?');
       const checkerror = validName(req.body.name);
       if (checkerror) {
@@ -134,7 +134,7 @@ export const updateHospital = async (req, res) => {
       values.push(req.body.name);
     }
 
-    if (req.body.location) {
+    if (req.body.location!==undefined) {
       updateFields.push('location = ?');
       const checkerror = validLocation(req.body.location);
       if (checkerror) {
@@ -148,7 +148,11 @@ export const updateHospital = async (req, res) => {
     }
     else if (Object.keys(errorBucket).length > 0) {
       responseError(res, 400, " Attributes required", errorBucket);
-    } else {
+    }
+    else if(updateFields.length===0){
+      responseError(res,400,"bad credentials",{error:"please update selected fields only"});
+    }
+    else {
       const sqlQuery = `
         UPDATE hospital
         SET ${updateFields.join(', ')}
