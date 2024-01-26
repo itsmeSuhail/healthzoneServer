@@ -241,8 +241,13 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    # Choose the file path of the Postman API collection
 
    ```
+  ***Server Images***
+  
+   ![1](https://github.com/itsmeSuhail/healthzoneServer/assets/98868023/52ec3bb1-9d5e-42d0-9e09-36b3d28cb3d1)
+  ![2](https://github.com/itsmeSuhail/healthzoneServer/assets/98868023/1bbce2ab-9d7e-4a62-9177-37fe5e22f105)
+  ![3](https://github.com/itsmeSuhail/healthzoneServer/assets/98868023/f8198063-eda2-40c1-95ce-8e89f4ef22f1)
+  ![4](https://github.com/itsmeSuhail/healthzoneServer/assets/98868023/96f2f6d7-698d-4c98-ba9e-033e235b9138)
 
-   
 
 **Getting Started:**
 
