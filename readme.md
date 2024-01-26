@@ -1,9 +1,17 @@
 # HealthZone Server
 
+
 **Introduction:**
 
 HealthZone Server is a robust system designed to manage hospitals, psychiatrists, patients, and images with a focus on efficiency, error handling, and data validation.It provides a set of well-defined APIs for performing CRUD operations on hospitals, psychiatrists, patients, and images. Additionally, the server is equipped with features like caching, handling concurrent requests, API rate limiting, and data compression to ensure optimal performance.
 
+ # Table of Contents
+- [Features](#features)
+- [Endpoint](#endpoints)
+- [Libraries](#libraries)
+- [Download Database and Api Files](#downloads)
+- [Preview Images](#preview)
+- [About](#about)
 ## Features
 
 - **Efficient CRUD Operations:**
@@ -186,7 +194,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    const link="http://localhost:3001/api/v1/image/get/af12ef1c9061d1cde199e8098ae4520d.jpg"
   ```
 
-## Libraries Used:
+## Libraries 
 
 - [mysql2](https://www.npmjs.com/package/mysql2)
   - Purpose: Used for interacting with the database
@@ -220,7 +228,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
     DB_PASSWORD=1
     ```
 
-## Download Files 
+## Downloads
   - Downoad Files from [**DownloadFiles**](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DownloadFiles) folder.Else given below
 
    **mysql Database File**
@@ -243,6 +251,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    # Choose the file path of the Postman API collection
 
    ```
+  ## Preview
   ***Server Images***
   
    ![1](https://github.com/itsmeSuhail/healthzoneServer/assets/98868023/52ec3bb1-9d5e-42d0-9e09-36b3d28cb3d1)
@@ -257,7 +266,6 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
 2. Install dependencies: `npm install`
 3. Start the server: `npm start`
 
-**Created By:**
-
-Mr Suhail
+## About
+**Created By:** Mr Suhail
 - Email address letxandy@gmail.com
