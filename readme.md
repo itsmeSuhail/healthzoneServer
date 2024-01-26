@@ -232,11 +232,11 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
     ```
 
 ## Downloads
-  - Downoad Files from [**DownloadFiles**](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DownloadFiles) folder.Else given below
+  - Downoad Files from [**DownloadFiles**](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DatabaseAndApi) folder.Else given below
 
    **mysql Database File**
    - All tables and values ​​are present to execute task.
-   - file link => [healthzoneDb](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone.sql) 
+   - file link => [healthzoneDb](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DatabaseAndApi/Database) 
    ```bash
     # Open cmd
     # Navigate to the download file path
@@ -247,7 +247,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
    ```
 
    **Postman Api's Folder**
-   - folder link => [postman Api endPoints](https://github.com/itsmeSuhail/healthzoneServer/blob/master/DownloadFiles/healthzone_server.postman_collection.json)
+   - folder link => [postman Api endPoints](https://github.com/itsmeSuhail/healthzoneServer/tree/master/DatabaseAndApi/ApiFolder)
    ```bash
    # Open Postman
    # Select the "Import" option
