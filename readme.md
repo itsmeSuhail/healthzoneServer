@@ -70,7 +70,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
 - **Update Hospital By Id:**
   - Endpoint: `PUT /api/v1/hospital/update/:id`
   - Description: Update specific hospital details.
-  -only given fields can be updated
+  - only given fields can be updated
   ```javascript
    const link="http://localhost:3001/api/v1/hospital/update/456789012345"
    const body={"name":"Naveen Hospital", "location":"Delhi"}
@@ -91,6 +91,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   - Description: Add psychiatrist.
   ```javascript
    const link="http://localhost:3001/api/v1/psychiatrist/add"
+   //phone number should start with country code else it will throw error
    const body={
         "email": "dfs@gmail.com",
         "phone": "+918990785632",
@@ -127,6 +128,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   ```javascript
   const link="http://localhost:3001/api/v1/psychiatrist/update/400478901234"
   //one of these fields value can be updated
+   //phone number should start with country code else it will throw error
   const body={
         "email": "dfs@gmail.com",
         "phone": "+918990785632",
@@ -148,6 +150,7 @@ HealthZone Server is a robust system designed to manage hospitals, psychiatrists
   - Description: Add patient. details.
   ```javascript
   const link="http://localhost:3001/api/v1/patient/add"
+   //phone number should start with country code else it will throw error
   //send this data as form-data in postman
   const body={"name":"vasu", "email":"strong@gmail.com","phone":"+918368992566","password":"Rz3bg5556","address":"purple light,near school","image":"image data","psychiatrist":"100145678901"}
   ```
